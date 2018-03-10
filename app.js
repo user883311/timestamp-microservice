@@ -7,7 +7,6 @@ const server = http.createServer((req, res) => {
     if (/^\/.+$/.test(req.url)) {
         console.log("There is a parameter in this request.");
         res.write(returnTimeStampJSON(req.url));
-        res.json()
         res.end();
     }
     else {
